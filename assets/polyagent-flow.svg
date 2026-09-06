@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 310" role="img" aria-labelledby="title desc">
+  <title id="title">PolyAgent execution flow</title>
+  <desc id="desc">A looping flow from orchestrator to parallel builders, browser QA, a repair decision, and a playable arcade.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071428"/><stop offset="1" stop-color="#1b1036"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #e9f5ff; }
+      .label { font-size: 18px; font-weight: 700; } .detail { font-size: 13px; fill: #a8c6df; }
+      .card { fill: #101d36; stroke: #315275; stroke-width: 2; } .pulse { animation: pulse 2.8s ease-in-out infinite; transform-origin: center; }
+      .link { fill: none; stroke: url(#accent); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 9 9; animation: travel 1.4s linear infinite; }
+      @keyframes travel { to { stroke-dashoffset: -36; } } @keyframes pulse { 50% { opacity: .68; } }
+    </style>
+  </defs>
+  <rect width="1200" height="310" rx="24" fill="url(#background)"/>
+  <text x="60" y="55" font-size="22" font-weight="700" fill="#67e8f9">AUTONOMOUS AGENT LOOP</text>
+  <text x="60" y="80" class="detail">A bounded build → verify → repair cycle</text>
+  <path class="link" d="M265 163H342 M510 163H580 M760 163H825 M1000 163H1065"/>
+  <path class="link" d="M912 228C912 285 425 285 425 228" opacity=".7"/>
+  <g class="pulse"><rect class="card" x="55" y="112" width="210" height="103" rx="16"/><text class="label" x="82" y="153">1 · ORCHESTRATE</text><text class="detail" x="82" y="180">ADK chooses objectives</text><text class="detail" x="82" y="199">and starts the team</text></g>
+  <g class="pulse" style="animation-delay:.35s"><rect class="card" x="342" y="112" width="168" height="103" rx="16"/><text class="label" x="369" y="153">2 · BUILD</text><text class="detail" x="369" y="180">5 framework</text><text class="detail" x="369" y="199">workers in parallel</text></g>
+  <g class="pulse" style="animation-delay:.7s"><rect class="card" x="580" y="112" width="180" height="103" rx="16"/><text class="label" x="607" y="153">3 · OBSERVE</text><text class="detail" x="607" y="180">SQLite board records</text><text class="detail" x="607" y="199">live progress</text></g>
+  <g class="pulse" style="animation-delay:1.05s"><rect class="card" x="825" y="112" width="175" height="103" rx="16"/><text class="label" x="852" y="153">4 · TEST</text><text class="detail" x="852" y="180">Playwright plays</text><text class="detail" x="852" y="199">each local game</text></g>
+  <g class="pulse" style="animation-delay:1.4s"><rect x="1065" y="112" width="90" height="103" rx="16" fill="#123e48" stroke="#22d3ee" stroke-width="2" filter="url(#glow)"/><text class="label" x="1084" y="153">PLAY</text><text class="detail" x="1080" y="180">arcade</text><text class="detail" x="1076" y="199">ready</text></g>
+  <text x="515" y="282" font-size="13" fill="#f0abfc">Broken? One focused repair returns to the build step.</text>
+</svg>

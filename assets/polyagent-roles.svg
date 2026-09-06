@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+  <title id="title">PolyAgent architecture roles</title>
+  <desc id="desc">The ADK orchestrator dispatches five builders through a shared SQLite board, then QA checks the resulting arcade.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0b1223"/><stop offset="1" stop-color="#22113c"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="5"/><feOffset dy="3"/><feComponentTransfer><feFuncA type="linear" slope=".4"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #eff8ff; } .h { font-size: 20px; font-weight: 700; } .s { font-size: 14px; fill: #b7cce1; }
+      .box { fill: #12213b; stroke: #3c668f; stroke-width: 2; } .line { stroke: #647fa1; stroke-width: 2; stroke-dasharray: 7 7; animation: move 1.8s linear infinite; }
+      @keyframes move { to { stroke-dashoffset: -28; } }
+    </style>
+  </defs>
+  <rect width="1200" height="540" rx="24" fill="url(#bg)"/>
+  <text x="55" y="52" font-size="24" font-weight="700" fill="#c4b5fd">THE POLYAGENT TEAM</text>
+  <text x="55" y="79" class="s">One decision-maker, specialised builders, a shared state layer, and observable QA.</text>
+  <path class="line" d="M330 182H448 M635 182H750 M925 182H1050 M542 270V360 M840 270V360"/>
+  <g filter="url(#shadow)"><rect class="box" x="55" y="118" width="275" height="150" rx="18" stroke="#a78bfa"/><text class="h" x="82" y="160">Google ADK</text><text class="s" x="82" y="190">Lead orchestrator</text><text class="s" x="82" y="214">Curriculum · scheduling · repair decisions</text><text class="s" x="82" y="238">Also authors style and arcade hub</text></g>
+  <g filter="url(#shadow)"><rect class="box" x="448" y="118" width="187" height="150" rx="18" stroke="#22d3ee"/><text class="h" x="475" y="160">DISPATCH</text><text class="s" x="475" y="190">Goals become</text><text class="s" x="475" y="214">parallel jobs</text></g>
+  <g filter="url(#shadow)"><rect class="box" x="750" y="118" width="175" height="150" rx="18" stroke="#34d399"/><text class="h" x="777" y="160">BUILDERS</text><text class="s" x="777" y="190">Invent + write</text><text class="s" x="777" y="214">browser games</text></g>
+  <g filter="url(#shadow)"><rect class="box" x="1050" y="118" width="100" height="150" rx="18" stroke="#fbbf24"/><text class="h" x="1068" y="160">QA</text><text class="s" x="1064" y="190">Play</text><text class="s" x="1064" y="214">Judge</text></g>
+  <g><rect x="425" y="360" width="255" height="120" rx="18" fill="#10344a" stroke="#22d3ee" stroke-width="2"/><text class="h" x="454" y="405">SQLite shared board</text><text class="s" x="454" y="434">goals · substeps · status · results</text><text class="s" x="454" y="458">WAL enables parallel workers</text></g>
+  <g><rect x="750" y="360" width="350" height="120" rx="18" fill="#24324b" stroke="#f472b6" stroke-width="2"/><text class="h" x="780" y="405">Local language arcade</text><text class="s" x="780" y="434">index.html + independently generated games</text><text class="s" x="780" y="458">Pure HTML, CSS, and JavaScript · file:// ready</text></g>
+  <text x="768" y="305" font-size="13" fill="#6ee7b7">AWS Strands · Pydantic AI · Microsoft Agent Framework · Agno · Mastra</text>
+</svg>

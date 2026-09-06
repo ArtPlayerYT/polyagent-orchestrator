@@ -13,6 +13,10 @@
 
 PolyAgent is an autonomous **agent loop** that turns a collection of framework-specific workers into a small language-learning web arcade. A Google ADK agent acts as the lead: it chooses learning objectives, launches independent builders in parallel, watches their shared task board, plays the finished games in a real browser, and gives a broken game one focused repair attempt.
 
+<p align="center">
+  <img src="assets/polyagent-flow.svg" alt="Animated PolyAgent flow: orchestrate, build, test, repair, play" width="900" />
+</p>
+
 ## What happens in one run
 
 ```mermaid
@@ -34,6 +38,15 @@ flowchart LR
 ```
 
 The loop is deliberately bounded: workers have timeouts, QA has a call budget, and each game is repaired at most once. That gives the coordinator room to act autonomously without letting a bad task retry forever.
+
+<details>
+<summary><strong>Explore the system roles</strong> — open the visual map</summary>
+
+<br />
+<p align="center">
+  <img src="assets/polyagent-roles.svg" alt="PolyAgent roles and shared state architecture" width="900" />
+</p>
+</details>
 
 ## The team
 
